@@ -2,8 +2,31 @@ var duration = 0;
 var duration_double = 0.0;
 var started=false;
 
+var settings = {
+  lecture: 'Einführung Internet-Technologien',
+  lecture_short: 'EIT',
+  assignments: '5',
+  semester: 'SS',
+  default_duration: '90',
+}
+
+
 function init() {
-  //document.getElementById("mins").innerHTML = duration;
+
+  var now = new Date();
+  var year = now.getFullYear();
+  // set placeholders
+  document.getElementById("lecture").innerHTML = settings.lecture_short;
+  document.getElementById("assignments").innerHTML = settings.assignments;
+  document.getElementById("duration").value = settings.default_duration;
+  document.title = settings.lecture;
+
+  if (settings.semester == 'SS') {
+    document.getElementById("semester").innerHTML = "Sommersemester " + year;
+  } else if (settings.semester == 'WS') {
+    document.getElementById("semester").innerHTML = "Wintersemester " + year+"/"+(year+1);
+  }
+
   // Alle Sekunde getTime neu aufrufen
   window.setInterval('getTime()',1000);
 }
@@ -36,7 +59,7 @@ function getTimeLeft() {
       var stop2 = window.setInterval('getTimeLeft()',30000);
       clearInterval(stop1);
       clearInterval(stop2);
-      
+
     }
   }
 }
@@ -53,6 +76,7 @@ function getDoubleTimeLeft() {
 
 function getTime() {
   var Jetzt = new Date();
+  var Jahr = Jetzt.getYear();
   var Stunden = Jetzt.getHours();
   var Minuten = Jetzt.getMinutes();
   var Sekunden = Jetzt.getSeconds();

@@ -78,10 +78,14 @@ audio {
 }
 
 #info h1 {
-  background-color: #6699ff;
+  background-color: #a51e37;
+  color: #ffffff;
   border-radius: 15px;
   padding: 20px;
   width: 100%;
+  background-image: url(palme_gold.png);
+  background-position: right 1% center;
+  background-repeat: no-repeat;
 }
 
 #info ul li {
