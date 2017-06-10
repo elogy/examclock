@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Klausu(h)r</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="uhr.js"></script>
+  </head>
+  <body onload="init()">
+    <div id="wrapper">
+      <div id="info">
+        <h1>Willkommen zur Klausur in GWE im Wintersemester 2016/17!</h1><br />
+        <ul>
+          <li>Auf dem Tisch: Studierendenausweis&trade;, Personalausweis, dokumentenechter Stift, Schreibpapier (kein Block!), Essen/Trinken</li>
+          <li><b>Es sind keine Hilfsmittel zur Klausur zugelassen.</b></li>
+          <li><b>Verwenden Sie keinen Rotstift und keinen Bleistift!</b></li>
+          <li>Bitte schalten Sie Ihr Handy aus!</li>
+          <li>Packen Sie Ihre Armbanduhr in die Tasche. (Danke Apple...)</li>
+          <li><b>Schreiben Sie jede Aufgabe auf ein neues Blatt</b>, Sie benötigen mind. 5 Blatt Papier.</li>
+	</ul><br />
+	<h2>Wir wünschen Ihnen viel Erfolg!</h2>
+</div>
+      <div id="clock">
+      <p id="timeinfo">Die aktuelle Uhrzeit ist</p>
+      <h1 id="time">&nbsp;</h1>
+      <h2 id="timeleft">Sie haben noch&nbsp;<span id="mins">--</span> <span id="text">Minuten</span> Zeit.</h2>
+    </div>
+  </div>
+  <audio controls id="jeopardy" type="audio/ogg" src="jeopardy.ogg"></audio>
+  <div id="settings">
+    <input type="text" id="duration" maxlength="3" placeholder="Klausurdauer in Minuten"/><input type="button" onclick="startTimer()" value="Start"/>
+  </div>
+  </body>
+</html>
