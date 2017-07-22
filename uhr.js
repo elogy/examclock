@@ -5,10 +5,10 @@ var started=false;
 var settings = {
   lecture: 'Einführung Internet-Technologien',
   lecture_short: 'EIT',
-  assignments: '5',
+  assignments: '6',
   semester: 'SS',
   default_duration: '90',
-}
+};
 
 
 function init() {
