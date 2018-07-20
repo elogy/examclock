@@ -6,6 +6,7 @@ body {
   font-family: sans-serif;
   background-image: url(body_bg.png);
   background-repeat: repeat;
+  width: 100%;
 }
 
 ul {
@@ -65,13 +66,15 @@ audio {
 
 
 #wrapper {
-  margin-top: 5%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  margin-bottom: 100px;
+  max-width: 95%;
 }
 
 #info {
@@ -88,6 +91,10 @@ audio {
   background-image: url(palme_gold.png);
   background-position: right 1% center;
   background-repeat: no-repeat;
+}
+
+#info h2 {
+  text-align: center;
 }
 
 #info ul li {
@@ -120,6 +127,6 @@ audio {
 #settings {
   padding: 5px;
   font-size: 0.8em;
-  position: fixed;
+  position: absolute;
   bottom: 0px;
 }
