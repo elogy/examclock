@@ -56,9 +56,10 @@ function getTimeLeft() {
     if(duration<=0) {
 		document.getElementById("timeleft").innerHTML="Die Bearbeitungszeit ist vorbei!";
       var stop1 = window.setInterval('getTimeLeft()',60000);
-      var stop2 = window.setInterval('getTimeLeft()',30000);
+      var stop2 = window.setInterval('getDoubleTimeLeft()',30000);
       clearInterval(stop1);
       clearInterval(stop2);
+      started = false;
 
     }
   }
