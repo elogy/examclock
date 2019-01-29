@@ -3,10 +3,10 @@ var duration_double = 0.0;
 var started=false;
 
 var settings = {
-  lecture: 'Einführung Internet-Technologien',
-  lecture_short: 'EIT',
-  assignments: '6',
-  semester: 'SS',
+  lecture: 'Grundlagen Web-Entwicklung',
+  lecture_short: 'GWE',
+  assignments: '5',
+  semester: 'WS',
   default_duration: '90',
 };
 
@@ -24,7 +24,7 @@ function init() {
   if (settings.semester == 'SS') {
     document.getElementById("semester").innerHTML = "Sommersemester " + year;
   } else if (settings.semester == 'WS') {
-    document.getElementById("semester").innerHTML = "Wintersemester " + year+"/"+(year+1);
+    document.getElementById("semester").innerHTML = "Wintersemester " + (year-1)+"/"+year;
   }
 
   // Alle Sekunde getTime neu aufrufen
