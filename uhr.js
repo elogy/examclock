@@ -3,10 +3,10 @@ var duration_double = 0.0;
 var started=false;
 
 var settings = {
-  lecture: 'Grundlagen Web-Entwicklung',
-  lecture_short: 'GWE',
+  lecture: 'RODMI',
+  lecture_short: 'RODMI',
   assignments: '5',
-  semester: 'WS',
+  semester: 'SS',
   default_duration: '90',
 };
 
@@ -17,7 +17,7 @@ function init() {
   var year = now.getFullYear();
   // set placeholders
   document.getElementById("lecture").innerHTML = settings.lecture_short;
-  document.getElementById("assignments").innerHTML = settings.assignments;
+  // document.getElementById("assignments").innerHTML = settings.assignments;
   document.getElementById("duration").value = settings.default_duration;
   document.title = settings.lecture;
 
@@ -83,6 +83,5 @@ function getTime() {
   var Sekunden = Jetzt.getSeconds();
   // die null in 05:01:02
   var Vorstd = ((Stunden < 10) ? "0" : "");var Vormin = ((Minuten < 10) ? ":0" : ":");var Vorsek = ((Sekunden < 10) ? ":0" : ":");
-  var Uhrzeit = Vorstd + Stunden + Vormin + Minuten + Vorsek + Sekunden;
-  document.getElementById("time").innerHTML = Uhrzeit;
+  document.getElementById("time").innerHTML = Vorstd + Stunden + Vormin + Minuten + Vorsek + Sekunden;
   }
